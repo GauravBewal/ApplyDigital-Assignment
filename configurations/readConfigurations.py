@@ -13,35 +13,5 @@ class ReadConfig:
 
     @staticmethod
     def getURL():
-        url = config.get('URL', 'portal_stage_url')
+        url = config.get('URL', 'website_url')
         return url
-
-    @staticmethod
-    def getUsername():
-        username = config.get('CREDENTIALS', 'username')
-        return username
-
-    @staticmethod
-    def getPassword():
-        password = config.get('CREDENTIALS', 'password')
-        return password
-
-    @staticmethod
-    def setUrl(url):
-        config.set('URL', 'portal_stage_url', url)
-        ReadConfig.save_changes(config)
-
-    @staticmethod
-    def setUsername(username):
-        config.set('CREDENTIALS', 'username', username)
-        ReadConfig.save_changes(config)
-
-    @staticmethod
-    def setPassword(password):
-        config.set('CREDENTIALS', 'password', password)
-        ReadConfig.save_changes(config)
-
-    @staticmethod
-    def save_changes(config):
-        with open(ini_file, "w") as configfile:
-            config.write(configfile)

@@ -110,7 +110,3 @@ class PlaceOrder:
 
     def verify_signup_button(self):
         expect(self.page.locator(self.signup_button)).to_be_visible(timeout=30000)
-
-    def verify_guid_overview(self):
-        expect(self.page.locator(self.guid_header)).to_be_visible(timeout=30000)
-        expect(self.page.locator(self.guid_value)).to_contain_text("40DD879C-EE2F-11DB-8314-0800200C9A26")

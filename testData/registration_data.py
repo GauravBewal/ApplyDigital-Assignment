@@ -1,11 +1,11 @@
 from faker.proxy import Faker
 
-global email, username, password, first_name, last_name, address, city, state, zipcode, mobile_number
-global card_number, cvc, card_month, card_year
+global email, username, password, first_name, last_name, address, city, state, zipcode, mobile_number, \
+    card_number, cvc, card_month, card_year
 
 def initialize_registration_data():
-    global email, username, password, first_name, last_name, address, city, state, zipcode, mobile_number
-    global card_number, cvc, card_month, card_year
+    global email, username, password, first_name, last_name, address, city, state, zipcode, mobile_number, \
+        card_number, cvc, card_month, card_year
     f = Faker()
     email = f.email()
     username = f.user_name()
